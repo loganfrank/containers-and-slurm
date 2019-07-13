@@ -1,0 +1,23 @@
+Bootstrap:docker
+From:ubuntu:18.04
+
+%Setup
+
+%Environment
+
+%Post
+	apt update
+	apt install -y \
+	    wget \
+	    unzip \
+	    vim \
+	    git \
+	    cmake \
+	    emacs \
+	    default-jre \
+	    default-jdk \
+	    curl
+	curl -O https://download.clojure.org/install/linux-install-1.10.1.462.sh
+	chmod +x linux-install-1.10.1.462.sh
+	./linux-install-1.10.1.462.sh
+	rm /linux-install-1.10.1.462.sh
