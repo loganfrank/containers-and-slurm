@@ -1,0 +1,17 @@
+Bootstrap:docker
+From:ubuntu:18.04
+
+%Setup
+
+%Environment
+
+%Post
+	apt update
+	apt install -y \
+	    wget \
+	    unzip \
+	    vim \
+	    git \
+	    cmake \
+	    emacs
+	apt install -y haskell-platform
