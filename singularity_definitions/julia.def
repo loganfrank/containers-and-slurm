@@ -21,4 +21,3 @@ From:ubuntu:18.04
 	rm julia-1.1.1-linux-x86_64.tar.gz
 
 	export PATH=/opt/julia-1.1.1/bin/:$PATH
-	

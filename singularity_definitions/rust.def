@@ -1,0 +1,20 @@
+Bootstrap:docker
+From:ubuntu:18.04
+
+%Setup
+
+%Environment
+
+%Post
+	apt update
+	apt install -y \
+		wget \
+		curl \
+		unzip \
+		vim \
+		git \
+		cmake \
+		make \
+		emacs
+	curl https://sh.rustup.rs -sSfy | sh
+

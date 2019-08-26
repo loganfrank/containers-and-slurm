@@ -1,0 +1,22 @@
+Bootstrap:docker
+From:ubuntu:18.04
+
+%Setup
+
+%Environment
+
+%Post
+	apt update
+	apt install -y \
+		build-essential \
+		wget \
+		curl \
+		unzip \
+		vim \
+		git \
+		cmake \
+		emacs \
+		libncurses5-dev \
+		libncursesw5-dev
+	curl https://sh.rustup.rs -sSfy | sh
+

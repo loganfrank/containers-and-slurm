@@ -1,0 +1,25 @@
+Bootstrap:docker
+From:ubuntu:18.04
+
+%Setup
+
+%Environment
+
+%Post
+	apt update
+	apt install -y \
+		build-essential \
+		wget \
+		curl \
+		unzip \
+		vim \
+		git \
+		cmake \
+		emacs
+	wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
+	dpkg -i erlang-solutions_1.0_all.deb
+	apt update
+	apt install esl-erlang \
+		elixir
+	rm erlang-solutions_1.0_all.deb
+
